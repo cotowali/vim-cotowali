@@ -1,3 +1,3 @@
 # vim-cotowali
 
-vim plugin for [Cotowali](https://github.com/cotowali/cotowali) providing filetype detection, syntax highlighting and indentation.
+[Cotowali](https://github.com/cotowali/cotowali) support for vim: providing filetype detection, syntax highlighting, and indentation.
