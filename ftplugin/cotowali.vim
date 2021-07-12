@@ -8,9 +8,10 @@ if exists('b:did_ftplugin')
 endif
 let b:did_ftplugin = 1
 
-
 let s:save_cpo = &cpo
 set cpo&vim
+
+command! -nargs=0 -bang -buffer LiRun :w !lic run
 
 setlocal formatoptions-=t formatoptions+=croql
 
