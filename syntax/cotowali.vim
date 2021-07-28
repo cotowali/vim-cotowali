@@ -76,10 +76,11 @@ syn region cotowaliParen start='(' end=')' transparent
 syn keyword cotowaliTodo contained TODO FIXME XXX BUG
 hi def link cotowaliTodo Todo
 
-syn cluster cotowaliCommentGroup contains=cotowaliTodo
-syn region  cotowaliComment      start='/\*' end='\*/' contains=cotowariCommentGroup,@Spell
-syn region  cotowaliComment      start='//' end='$' contains=cotowariCommentGroup,@Spell
-hi def link cotowaliComment      Comment
+syn cluster cotowaliCommentGroup  contains=cotowaliTodo
+syn region  cotowaliBlockComment  start='/\*' end='\*/' contains=cotowaliBlockComment,cotowariCommentGroup,@Spell
+syn region  cotowaliInlineComment start='//' end='$' contains=cotowariCommentGroup,@Spell
+hi def link cotowaliBlockComment  Comment
+hi def link cotowaliInlineComment Comment
 
 
 " =========================  END  =========================
