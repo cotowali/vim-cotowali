@@ -59,6 +59,11 @@ hi def link Float   Number
 syn match   cotowaliStringVarExpansion  '\$\w*' display contained containedin=cotowaliDoubleQuotedString
 hi def link cotowaliStringVarExpansion Special
 
+syn match   cotowaliDoubleQuotedStringEscapeSequence '\\[nt\"$]' display contained containedin=cotowaliDoubleQuotedString
+syn match   cotowaliSingleQuotedStringEscapeSequence '\\[\']' display contained containedin=cotowaliSingleQuotedString
+hi def link cotowaliDoubleQuotedStringEscapeSequence Special
+hi def link cotowaliSingleQuotedStringEscapeSequence Special
+
 syn region  cotowaliDoubleQuotedString start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn region  cotowaliSingleQuotedString start=+'+ skip=+\\\\\|\\'+ end=+'+
 hi def link cotowaliDoubleQuotedString String
