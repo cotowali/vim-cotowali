@@ -56,10 +56,13 @@ hi def link Float   Number
 
 " string
 " ------
-" TODO: interpolation
-syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+
-syn region  cotowaliString start=+'+ skip=+\\\\\|\\'+ end=+'+
-hi def link cotowaliString String
+syn match   cotowaliStringVarExpansion  '\$\w*' display contained containedin=cotowaliDoubleQuotedString
+hi def link cotowaliStringVarExpansion Special
+
+syn region  cotowaliDoubleQuotedString start=+"+ skip=+\\\\\|\\"+ end=+"+
+syn region  cotowaliSingleQuotedString start=+'+ skip=+\\\\\|\\'+ end=+'+
+hi def link cotowaliDoubleQuotedString String
+hi def link cotowaliSingleQuotedString String
 
 syn region  cotowaliRawString start=+r"+ end=+"+
 syn region  cotowaliRawString start=+r'+ end=+'+
