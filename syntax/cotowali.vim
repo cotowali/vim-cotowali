@@ -56,10 +56,14 @@ hi def link Float   Number
 
 " string
 " ------
-" TODO: escape, interpolation
-syn region  cotowaliString start=+"+ skip=+\\\\\|\\'+ end=+"+
+" TODO: interpolation
+syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn region  cotowaliString start=+'+ skip=+\\\\\|\\'+ end=+'+
 hi def link cotowaliString String
+
+syn region  cotowaliRawString start=+r"+ end=+"+
+syn region  cotowaliRawString start=+r'+ end=+'+
+hi def link cotowaliRowString String
 
 " operator
 " --------
