@@ -26,7 +26,7 @@ hi def link cotowaliConditional Conditional
 hi def link cotowaliRepeat      Repeat
 
 syn keyword cotowaliStatement   assert break continue require return yield
-syn keyword cotowaliKeyword     fn in type
+syn keyword cotowaliKeyword     fn in type namespace
 hi def link cotowaliStatement   Statement
 hi def link cotowaliKeyword     Keyword
 
