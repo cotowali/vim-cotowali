@@ -63,7 +63,7 @@ hi def link cotowaliString String
 
 syn region  cotowaliRawString start=+r"+ end=+"+
 syn region  cotowaliRawString start=+r'+ end=+'+
-hi def link cotowaliRowString String
+hi def link cotowaliRawString String
 
 " operator
 " --------
