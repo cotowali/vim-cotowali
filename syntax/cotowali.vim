@@ -40,7 +40,7 @@ hi def link cotowaliType Type
 syn keyword cotowaliBoolean true false
 hi def link cotowaliBoolean Boolean
 
-syn keyword cotowaliBuiltinFunction echo read
+syn keyword cotowaliBuiltinFunction echo read typeof nameof
 hi def link cotowaliBuiltinFunction Function
 
 " number
