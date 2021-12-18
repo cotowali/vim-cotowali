@@ -109,18 +109,17 @@ if exists('b:current_syntax')
   unlet b:current_syntax
 endif
 
-syn region cotowaliShBlock start='sh\_s*{' end='}' contains=@cotowaliInlineSh
+syn region cotowaliShBlock start='sh\_s*{\@=' end='}\@<=' contains=@cotowaliInlineSh
 syn include @cotowaliInlineSh syntax/sh.vim
-syn clear shCurlyError " workaround to match `sh { ... }` correctly
 
 if exists('b:current_syntax')
   unlet b:current_syntax
 endif
 
-syn region cotowaliPwshBlock start='pwsh\_s' end='}' contains=@cotowaliInlinePwsh
+syn region cotowaliPwshBlock start='pwsh\_s{' end='}\@<=' contains=@cotowaliInlinePwsh
 try
   syn include @cotowaliInlinePwsh syntax/ps1.vim
-  syn clear ps1Block " workaround to match `pwsh { ... }` correctly
+  syn cluster Block remove=ps1Block
 catch
 endtry
 
