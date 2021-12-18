@@ -103,6 +103,8 @@ hi def link cotowaliBlockComment  Comment
 hi def link cotowaliInlineComment Comment
 
 " inline shell
+syn region cotowaliInlineBlock start='inline\_s*{' end='}'
+
 if exists('b:current_syntax')
   unlet b:current_syntax
 endif
