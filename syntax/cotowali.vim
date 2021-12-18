@@ -61,7 +61,9 @@ syn region  cotowaliStringExprSubstitution start=+${+ end=+}+ contained contains
 hi def link cotowaliStringVarExpansion     Special
 hi def link cotowaliStringExprSubstitution Special
 
-syn cluster cotowaliStringExprContained contains=cotowaliBoolean,cotowaliDecimalInt,cotowaliFloat,cotowaliString,cotowaliRawString,cotowaliOperator,cotowaliParen,cotowaliBlockComment
+syn cluster cotowaliStringExprContained contains=
+  \ cotowaliBoolean,cotowaliDecimalInt,cotowaliFloat,cotowaliString,cotowaliRawString,
+  \ cotowaliOperator,cotowaliParen,cotowaliBlockComment
 
 syn match   cotowaliDoubleQuotedStringEscapeSequence '\\[nt\"$]' display contained containedin=cotowaliDoubleQuotedString
 syn match   cotowaliSingleQuotedStringEscapeSequence '\\[\']' display contained containedin=cotowaliSingleQuotedString
@@ -69,7 +71,8 @@ hi def link cotowaliDoubleQuotedStringEscapeSequence cotowaliEscapeSequence
 hi def link cotowaliSingleQuotedStringEscapeSequence cotowaliEscapeSequence
 hi def link cotowaliEscapeSequence Special
 
-syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=cotowaliDoubleQuotedStringEscapeSequence,cotowaliStringVarExpansion,cotowaliStringExprSubstitution
+syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=
+  \ cotowaliDoubleQuotedStringEscapeSequence,cotowaliStringVarExpansion,cotowaliStringExprSubstitution
 syn region  cotowaliString start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=cotowaliSingleQuotedStringEscapeSequence
 hi def link cotowaliString String
 
