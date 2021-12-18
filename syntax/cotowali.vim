@@ -92,6 +92,7 @@ syn region cotowaliBlock start='{' end='}' transparent fold
 syn region cotowaliParen start='(' end=')' transparent
 
 " comments
+" --------
 syn keyword cotowaliTodo contained TODO FIXME XXX BUG
 hi def link cotowaliTodo Todo
 
