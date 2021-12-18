@@ -69,8 +69,8 @@ hi def link cotowaliDoubleQuotedStringEscapeSequence cotowaliEscapeSequence
 hi def link cotowaliSingleQuotedStringEscapeSequence cotowaliEscapeSequence
 hi def link cotowaliEscapeSequence Special
 
-syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=cotowaliDoubleQuotedEscapeSequence,cotowaliStringVarExpansion,cotowaliStringExprSubstitution
-syn region  cotowaliString start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=cotowaliSingleQuotedEscapeSequence
+syn region  cotowaliString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=cotowaliDoubleQuotedStringEscapeSequence,cotowaliStringVarExpansion,cotowaliStringExprSubstitution
+syn region  cotowaliString start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=cotowaliSingleQuotedStringEscapeSequence
 hi def link cotowaliString String
 
 syn region  cotowaliRawString start=+r"+ end=+"+
