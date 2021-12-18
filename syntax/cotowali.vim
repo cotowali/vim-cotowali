@@ -65,7 +65,7 @@ syn cluster cotowaliStringExprContained contains=
   \ cotowaliBoolean,cotowaliDecimalInt,cotowaliFloat,cotowaliString,cotowaliRawString,
   \ cotowaliOperator,cotowaliParen,cotowaliBlockComment
 
-syn match   cotowaliDoubleQuotedStringEscapeSequence '\\[nt\"$]' display contained containedin=cotowaliDoubleQuotedString
+syn match   cotowaliDoubleQuotedStringEscapeSequence /\v\\([nt\"$]|[xX][0-9a-fA-F]{0,2})/ display contained containedin=cotowaliDoubleQuotedString
 syn match   cotowaliSingleQuotedStringEscapeSequence '\\[\']' display contained containedin=cotowaliSingleQuotedString
 hi def link cotowaliDoubleQuotedStringEscapeSequence cotowaliEscapeSequence
 hi def link cotowaliSingleQuotedStringEscapeSequence cotowaliEscapeSequence
