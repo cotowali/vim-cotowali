@@ -15,7 +15,6 @@ set cpo&vim
 
 " statements / keywords
 " ---------------------
-syn keyword cotowaliDeclType    struct
 syn keyword cotowaliDeclaration var const
 hi def link cotowaliDeclType    Keyword
 hi def link cotowaliDeclaration Keyword
